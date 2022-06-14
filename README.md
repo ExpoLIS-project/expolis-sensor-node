@@ -11,7 +11,7 @@ Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia
                        Vânia Martins and José Moura and
                        Tomás Brandão and Pedro Santana},
        title =        {An Information System for Air Quality Monitoring using Mobile Sensor Networks},
-       booktitle =    {Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics},
+       booktitle =    {Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics (ICINCO 2022)},
        publisher =    {SciTePress},
        organization = {INSTICC}
     }
@@ -111,4 +111,32 @@ The software sends sensor data as a MQTT string. All values are separated by a s
 
 # Configuration
 
-The python source code in folder `src` has to be copied to folder 
+Clone this repository into the raspberry pi or download a zip file with this repository.  Run the `setup.py` script:
+
+    python3 <PATH_TO_REPOSITORY>/setup.py
+
+This script will copy the python files to a folder in the home directory of the `pi` user, ask the id number of the sensor node, ask the path where the USB pen is mounted, create the `Sensor_Node.ini` configuration file, and install the `stay_alive.sh` cron script.
+
+The sensor node identification should be unique, as it identifies sensor data published by a sensor node.  The USB pen is where CSV files with sensor data are saved.  These CSV files are a backup of sensor data in case they are not received by the ExpoLIS server.  If you change the USB pen, you have to edit the `Sensor_Node.ini` file.
+
+## Sensor_Node.ini
+
+The `Sensor_Node.ini` file contains information about a sensor node.  It is created by the `setup.py` script.  Its location is in folder `/home/pi/SensorNode/`.  An example of the contents of this file is:
+
+    [BASE]
+    sensor_node_id = 1
+    mqtt_broker = mqtt.eclipse.org
+    publish_rate_period = 1
+    kp = 20.0
+    kd = 50.0
+    storage = /media/pi/usb-pen/
+    log_csv_boot = True
+    log_img_boot = False
+
+Most fields are self explanatory.
+
+* `publish_rate_period` is the rate in seconds at which data is published;
+* `kp` and `kd` are used by the kalman filter when processing raw PM data;
+* `storage` folder where the USB pen is mounted;
+* `log_csv_boot` whether the sensor node should save sensor data in CSV files;
+* `log_img_boot` currently not used.
