@@ -24,8 +24,7 @@ IMAGE_FILE_TEMPLATE = '{}Frame_{{iteration}}_{}_{{datetime}}.jpg'.format (IMAGES
 TOPIC_LOG = 'expolis_project/sensor_nodes/logs/sn_{}'.format (SENSOR_NODE_ID)
 # noinspection SpellCheckingInspection
 TOPIC_CSV_FILES = 'expolis_project/sensor_nodes/csvfiles/sn_{}'.format (SENSOR_NODE_ID)
-# noinspection SpellCheckingInspection
-TOPIC_MANAGEMENT = 'expolis_project/sensor_nodes/managment/sn_{}'.format (SENSOR_NODE_ID)
+TOPIC_MANAGEMENT = 'expolis_project/sensor_nodes/management/sn_{}'.format (SENSOR_NODE_ID)
 TOPIC_SENSOR_DATA = 'expolis_project/sensor_nodes/sn_{}'.format (SENSOR_NODE_ID)
 TOPIC_IMAGE_DATA = 'expolis_project/sensor_nodes/images/sn_{}'.format (SENSOR_NODE_ID)
 

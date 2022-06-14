@@ -1,18 +1,19 @@
 #!/bin/bash
 
 PROCESS="/home/pi/expolis-sensor-node/sensor_node.py"
+WATCHDOG="PATH_TO_WATCHDOG/watchdog"
 
 if pgrep -f "$PROCESS" > /dev/null
 then
-    if test `find "/media/pi/447AE8637AE8536A/watchdog" -mmin +5`
+    if test `find "$WATCHDOG" -mmin +5`
     then
         echo $(date)": rebooting machine" >> /var/log/expolis/crontab
-        touch "/media/pi/447AE8637AE8536A/watchdog"
+        touch "$WATCHDOG"
         sync
         nohup shutdown -r now
     fi
 
-    if test `find "/media/pi/447AE8637AE8536A/watchdog" -mmin +1`
+    if test `find "$WATCHDOG" -mmin +1`
     then
         echo $(date)": killing process" >> /var/log/expolis/crontab
         pkill -9 -f "python3 $PROCESS"
