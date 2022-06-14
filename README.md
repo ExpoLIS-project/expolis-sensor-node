@@ -1,9 +1,26 @@
-# expolis-sensor-node
-Software that runs on the raspberry that controls the sensors
+# ExpoLIS Sensor Node
+Software that runs on the raspberry that controls the sensor hardware. This software reads sensor values and publishes values on the ExpoLIS MQTT broker.  Data order is important and should match the ExpoLIS server daemon script responsible for saving sensor data in the database.
+
+If you use this software please cite the following publication:
+
+Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia Martins, José Moura, Tomás Brandão e Pedro Santana. "An Information System for Air Quality Monitoring using Mobile Sensor Networks". In: Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics. INSTICC. SciTePress.
+
+    @InProceedings{Mariano2022a,
+       author =       {Pedro Mariano and Susana Marta Almeida and
+                       Alexandre Almeida and Carolina Correia and
+                       Vânia Martins and José Moura and
+                       Tomás Brandão and Pedro Santana},
+       title =        {An Information System for Air Quality Monitoring using Mobile Sensor Networks},
+       booktitle =    {Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics},
+       publisher =    {SciTePress},
+       organization = {INSTICC}
+    }
+
+
 
 # Dependencies
 
-The second version of the sensor node has the following dependencies
+The sensor node has the following dependencies
 
 | sensor                   | library | pip package                 |
 |--------------------------|---------|-----------------------------|
@@ -90,3 +107,8 @@ The software sends sensor data as a MQTT string. All values are separated by a s
    2. Add the line `dtoverlay=i2c-rtc,ds1307` to the end of the file.
    3. Reboot
    4. run the command `sudo apt-get install -y i2c-tools`
+
+
+# Configuration
+
+The python source code in folder `src` has to be copied to folder 
