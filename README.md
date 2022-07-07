@@ -32,19 +32,30 @@ Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia
        organization = {INSTICC}
     }
 
+# Sensor Hardware
+
+* Optical particle counter (Model OPC-N3 from Alphasense);
+* CO sensor (CO-B4, Alphasense);
+* NO2 sensor (NO2-A43F, Alphasense);
+* Temperature and relative humidity sensor (SHTC3, Adafruit);
+* Barometric pressure sensor (LPS25, Adafruit);
+* Accelerometer (MSA 301, Adafruit);
+* GPS sensor (PA1010D, Adafruit).
+
+
 # Dependencies
 
 The sensor node has the following dependencies
 
-| sensor                   | library | pip package                 |
-|--------------------------|---------|-----------------------------|
-| PM1 PM2.5 PM10           |         |                             |
-| ADC                      | ADS1115 |                             |
-| Barometric pressure      | LPS25   |                             |
-| Accelerometer            | MSA301  |                             |
-| Temperature and Humidity | SHTC3   |                             |
-| GPS                      | PA1010D | `adafruit-circuitpython-gps`|
-| Real Time Clock          | DS1307  |                             |
+| sensor                   | library | pip package                     |
+|--------------------------|---------|---------------------------------|
+| PM1 PM2.5 PM10           |         |                                 |
+| ADC                      | ADS1115 |                                 |
+| Barometric pressure      | LPS25   |                                 |
+| Accelerometer            | MSA301  |                                 |
+| Temperature and Humidity | SHTC3   |                                 |
+| GPS                      | PA1010D | `adafruit-circuitpython-gps`    |
+| Real Time Clock          | DS1307  | `adafruit-circuitpython-ds1307` |
 
     sudo pip3 install adafruit-circuitpython-ads1x15
     sudo pip3 install adafruit-circuitpython-lps2x
