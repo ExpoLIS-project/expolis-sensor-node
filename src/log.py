@@ -313,11 +313,14 @@ def restart_log_csv (csv_filename: str) -> None:
     """
     global log_data, current_log_file, number_lines_log_file, last_csv_open
 
-    last_csv_open = csv_filename
-    print ("restarting log file " + csv_filename)
-    number_lines_log_file = sum (1 for _ in open (csv_filename, 'r'))
-    log_data = True
-    current_log_file = open (csv_filename, 'a+')
+    if os.path.exists (csv_filename):
+        last_csv_open = csv_filename
+        print ("restarting log file " + csv_filename)
+        number_lines_log_file = sum (1 for _ in open (csv_filename, 'r'))
+        log_data = True
+        current_log_file = open (csv_filename, 'a+')
+    else:
+        start_log_csv ()
 
 
 def close_log_csv () -> None:
