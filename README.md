@@ -3,22 +3,11 @@ Software that runs on the raspberry that controls the sensor hardware. This soft
 
 If you use this software please cite the following publication:
 
-Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia Martins, José Moura, Tomás Brandão e Pedro Santana. "An Information System for Air Quality Monitoring using Mobile Sensor Networks". In: Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics. INSTICC. SciTePress.
-
-For more information about the ExpoLIS project see the following publication:
-
 Pedro Santana, Alexandre Almeida, Pedro Mariano, Carolina Correia, Vânia Martins, Susana Marta Almeida. (2021). Air quality mapping and visualisation: An affordable solution based on a vehicle-mounted sensor network. Journal of Cleaner Production, 315:128194.
 
-    @InProceedings{Mariano2022a,
-       author =       {Pedro Mariano and Susana Marta Almeida and
-                       Alexandre Almeida and Carolina Correia and
-                       Vânia Martins and José Moura and
-                       Tomás Brandão and Pedro Santana},
-       title =        {An Information System for Air Quality Monitoring using Mobile Sensor Networks},
-       booktitle =    {Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics (ICINCO 2022)},
-       publisher =    {SciTePress},
-       organization = {INSTICC}
-    }
+For complementary information see the following publication:
+
+Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia Martins, José Moura, Tomás Brandão e Pedro Santana. "An Information System for Air Quality Monitoring using Mobile Sensor Networks". In: Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics. INSTICC. SciTePress.
 
     @article{Santana2021a,
        author =       {Pedro Santana and Alexandre Almeida and Pedro Mariano and Carolina Correia and Vânia Martins and Susana Marta Almeida}
@@ -31,7 +20,17 @@ Pedro Santana, Alexandre Almeida, Pedro Mariano, Carolina Correia, Vânia Martin
        doi =          {10.1016/j.jclepro.2021.128194},
        url =          {https://www.sciencedirect.com/science/article/pii/S0959652621024124}
     }
-
+    
+    @InProceedings{Mariano2022a,
+       author =       {Pedro Mariano and Susana Marta Almeida and
+                       Alexandre Almeida and Carolina Correia and
+                       Vânia Martins and José Moura and
+                       Tomás Brandão and Pedro Santana},
+       title =        {An Information System for Air Quality Monitoring using Mobile Sensor Networks},
+       booktitle =    {Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics (ICINCO 2022)},
+       publisher =    {SciTePress},
+       organization = {INSTICC}
+    }
 
 # Dependencies
 
