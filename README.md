@@ -3,11 +3,11 @@ Software that runs on the raspberry that controls the sensor hardware. This soft
 
 If you use this software please cite the following publication:
 
-Pedro Santana, Alexandre Almeida, Pedro Mariano, Carolina Correia, Vânia Martins, Susana Marta Almeida. (2021). Air quality mapping and visualisation: An affordable solution based on a vehicle-mounted sensor network. Journal of Cleaner Production, 315:128194.
+> Pedro Santana, Alexandre Almeida, Pedro Mariano, Carolina Correia, Vânia Martins, Susana Marta Almeida. (2021). [Air quality mapping and visualisation: An affordable solution based on a vehicle-mounted sensor network](https://www.sciencedirect.com/science/article/pii/S0959652621024124). Journal of Cleaner Production, 315:128194.
 
 For complementary information see the following publication:
 
-Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia Martins, José Moura, Tomás Brandão e Pedro Santana. "An Information System for Air Quality Monitoring using Mobile Sensor Networks". In: Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics. INSTICC. SciTePress.
+> Pedro Mariano, Susana Marta Almeida, Alexandre Almeida, Carolina Correia, Vânia Martins, José Moura, Tomás Brandão e Pedro Santana. "An Information System for Air Quality Monitoring using Mobile Sensor Networks". In: Proceedings of the 19th International Conference on Informatics in Control, Automation and Robotics. INSTICC. SciTePress.
 
     @article{Santana2021a,
        author =       {Pedro Santana and Alexandre Almeida and Pedro Mariano and Carolina Correia and Vânia Martins and Susana Marta Almeida}
@@ -49,11 +49,10 @@ The sensor node has the following dependencies
 
 | sensor                   | library | pip package                     |
 |--------------------------|---------|---------------------------------|
-| PM1 PM2.5 PM10           |         |                                 |
-| ADC                      | ADS1115 |                                 |
-| Barometric pressure      | LPS25   |                                 |
-| Accelerometer            | MSA301  |                                 |
-| Temperature and Humidity | SHTC3   |                                 |
+| ADC                      | ADS1115 | `adafruit-circuitpython-ads1x15`|
+| Barometric pressure      | LPS25   | `adafruit-circuitpython-lps2x`  |
+| Accelerometer            | MSA301  | `adafruit-circuitpython-msa301` |
+| Temperature and Humidity | SHTC3   | `adafruit-circuitpython-shtc3`  |
 | GPS                      | PA1010D | `adafruit-circuitpython-gps`    |
 | Real Time Clock          | DS1307  | `adafruit-circuitpython-ds1307` |
 
